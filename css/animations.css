@@ -1,0 +1,3 @@
+/* Simple fades & entrance used by JS */
+.fade-in{ opacity:0; transform: translateY(18px); animation:fadeInUp 900ms ease forwards; }
+@keyframes fadeInUp { to { opacity:1; transform: translateY(0); } }

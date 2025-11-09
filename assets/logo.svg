@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="100" viewBox="0 0 400 100">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#ff8c00"/><stop offset="1" stop-color="#ffc786"/>
+    </linearGradient>
+  </defs>
+  <!-- shopping tag / bag icon -->
+  <g transform="translate(10,10)">
+    <rect x="0" y="10" width="60" height="60" rx="10" ry="10" fill="url(#g1)" />
+    <path d="M18 10 C18 4 26 4 26 10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="40" cy="30" r="6" fill="#fff" opacity="0.95"/>
+    <path d="M10 45 L25 62 L50 30" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.12"/>
+  </g>
+  <!-- text -->
+  <text x="90" y="55" font-family="Outfit, Poppins, sans-serif" font-weight="700" font-size="36" fill="#e9eef6">Get <tspan fill="url(#g1)">Deal</tspan></text>
+</svg>

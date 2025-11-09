@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Get Deal – Smart Amazon Picks</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.ico" />
+</head>
+<body>
+  <header class="glass">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="assets/logo.svg" alt="Get Deal logo" />
+        <span>Get Deal</span>
+      </div>
+
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="#" onclick="filterProducts('all')">All</a>
+          <a href="#" onclick="filterProducts('tech')">Tech</a>
+          <a href="#" onclick="filterProducts('kitchen')">Kitchen</a>
+          <a href="#" onclick="filterProducts('fitness')">Fitness</a>
+        </div>
+
+        <div class="controls">
+          <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-content fade-in">
+        <h1>Shop Smart. Live Better.</h1>
+        <p>Curated Amazon deals that elevate your lifestyle — handpicked and verified.</p>
+
+        <div class="search-wrap">
+          <input id="searchBox" type="text" placeholder="Search products..." />
+        </div>
+      </div>
+    </section>
+
+    <section id="product-section" class="products fade-in" aria-live="polite">
+      <!-- Skeletons will be inserted here while loading -->
+    </section>
+  </main>
+
+  <button id="scrollTopBtn" title="Back to top">↑</button>
+
+  <footer>
+    <p>© 2025 Get Deal. This site contains affiliate links — as an Amazon Associate I earn from qualifying purchases.</p>
+  </footer>
+
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

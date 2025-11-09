@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "category": "tech",
+    "title": "Fitness Smartwatch",
+    "description": "Track your workouts, sleep, and heart rate.",
+    "image": "https://m.media-amazon.com/images/I/61d5KFo5vCL._AC_SL1500_.jpg",
+    "link": "https://www.amazon.in/dp/B0B3V69N88?tag=YOURTAG-21"
+  },
+  {
+    "id": 2,
+    "category": "kitchen",
+    "title": "Coffee Maker",
+    "description": "Brew coffee at home in seconds.",
+    "image": "https://m.media-amazon.com/images/I/71NkU6y6dvL._AC_SL1500_.jpg",
+    "link": "https://www.amazon.in/dp/B09KNXW7D9?tag=YOURTAG-21"
+  }
+]
