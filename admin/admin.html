@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Panel – Get Deal</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="logo">⚙️ Get Deal Admin</div>
+    <p>Add new Amazon products easily</p>
+  </header>
+
+  <section class="admin-panel">
+    <div class="form-container">
+      <h2>Add Product</h2>
+
+      <label>Amazon Product Title:</label>
+      <input id="title" type="text" placeholder="e.g. Wireless Earbuds" />
+
+      <label>Image URL:</label>
+      <input id="image" type="text" placeholder="Paste Amazon image link" />
+
+      <label>Price:</label>
+      <input id="price" type="text" placeholder="e.g. ₹1999" />
+
+      <label>Description:</label>
+      <textarea id="desc" placeholder="Short product description"></textarea>
+
+      <label>Category:</label>
+      <select id="category">
+        <option value="kitchen">Kitchen</option>
+        <option value="tech">Tech</option>
+        <option value="fitness">Fitness</option>
+      </select>
+
+      <label>Affiliate Link (include ?tag=yourtag-21):</label>
+      <input id="link" type="text" placeholder="Paste your Amazon affiliate link" />
+
+      <button onclick="addProduct()">Add Product</button>
+
+      <div id="copy-container">
+        <pre id="output"></pre>
+        <button id="copy-btn" onclick="copyJSON()">📋 Copy JSON</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Get Deal | Admin Panel</p>
+  </footer>
+
+  <script src="admin/admin.js"></script>
+</body>
+</html>
+
+<style>
+/* ==========================================================
+   GET DEAL ADMIN PANEL  |  Local Interface Styling
+   ========================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0d1117, #1b1e24);
+  color: #f3f3f3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ---------- Header ---------- */
+header {
+  text-align: center;
+  padding: 40px 20px 20px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+header .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff9100;
+}
+
+header p {
+  margin-top: 8px;
+  color: #ccc;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- Form Section ---------- */
+.admin-panel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 20px;
+}
+
+.form-container {
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  padding: 40px 35px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+  color: #ffb347;
+  letter-spacing: 0.5px;
+}
+
+label {
+  display: block;
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #f3f3f3;
+  font-size: 0.95rem;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #ff9100;
+  background: rgba(255,255,255,0.12);
+  box-shadow: 0 0 8px rgba(255,145,0,0.3);
+}
+
+/* ---------- Button ---------- */
+button {
+  margin-top: 25px;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, #ff9100, #ffb347);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 145, 0, 0.35);
+}
+
+/* ---------- Output JSON Box ---------- */
+#copy-container {
+  margin-top: 25px;
+}
+
+#output {
+  background: rgba(0,0,0,0.3);
+  border-radius: 10px;
+  padding: 15px;
+  color: #ffb347;
+  font-family: monospace;
+  font-size: 0.9rem;
+  max-height: 250px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+#copy-btn {
+  background: linear-gradient(90deg, #0056d2, #00aaff);
+  margin-top: 10px;
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#copy-btn:hover {
+  background: linear-gradient(90deg, #0078ff, #00b3ff);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255,255,255,0.03);
+  color: #999;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .form-container {
+    padding: 25px 20px;
+  }
+  header .logo {
+    font-size: 1.4rem;
+  }
+  label {
+    margin-top: 12px;
+  }
+}
+</style>

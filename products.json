@@ -1,18 +1,38 @@
 [
   {
     "id": 1,
-    "category": "tech",
+    "category": "fitness",
     "title": "Fitness Smartwatch",
     "description": "Track your workouts, sleep, and heart rate.",
-    "image": "https://m.media-amazon.com/images/I/61d5KFo5vCL._AC_SL1500_.jpg",
-    "link": "https://www.amazon.in/dp/B0B3V69N88?tag=YOURTAG-21"
+    "image": "https://m.media-amazon.com/images/I/71GP1Wbzy9L._AC_SY450_.jpg",
+    "price": "$76.99",
+    "link": "https://amzn.to/3Ma2cpy"
   },
   {
     "id": 2,
     "category": "kitchen",
     "title": "Coffee Maker",
     "description": "Brew coffee at home in seconds.",
-    "image": "https://m.media-amazon.com/images/I/71NkU6y6dvL._AC_SL1500_.jpg",
-    "link": "https://www.amazon.in/dp/B09KNXW7D9?tag=YOURTAG-21"
+    "image": "https://m.media-amazon.com/images/I/812q34gNGiL._AC_SX679_.jpg",
+    "price": "$87.00",
+    "link": "https://amzn.to/3KC7dGT"
+  },
+  {
+    "id": 3,
+    "category": "fitness",
+    "title": "Yoga Socks",
+    "description": "Yoga Socks for Women, 3 Pairs Non Slip Pilates Grip Socks, Ankle Socks for Barre, Dance, Ballet, Workout with Arch Support, Size AUS 6-10",
+    "image": "https://m.media-amazon.com/images/I/811DU+Gy7NL._AC_SX522_.jpg",
+    "price": "$19.95",
+    "link": "https://amzn.to/4pCGvwC"
+  },
+  {
+    "id": 4,
+    "category": "kitchen",
+    "title": "Strainer and Pasta",
+    "description": "Strainer and Pasta - Adjustable Silicone Clip On for Pots, Pans, Bowls, Kitchen Gadget, Gadgets Home, Must Haves, Fits All Bowls Pots Grey 9.05''x4.92''x2.63''",
+    "image": "https://m.media-amazon.com/images/I/71pTbNSkJ0L._AC_SY450_.jpg",
+    "price": "$16.99",
+    "link": "https://amzn.to/3MxItQy"
   }
 ]
